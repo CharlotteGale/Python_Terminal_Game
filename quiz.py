@@ -10,7 +10,6 @@ class Question:
         print(self.question_text)
         for i, choice in enumerate(self.choices, start=1):
             print(f"{i}. {choice}")
-        choice = input(f"Your answer (1-{len(self.choices)}): ").strip()
 
         while True:
             choice = input(f"Your answer (1-{len(self.choices)}): ").strip()
@@ -46,20 +45,21 @@ def main():
     ]
 
     print("Are You a Potterhead?")
-    house = input("What is your Hogwarts House? ") or "Your House"
+    house = (input("What is your Hogwarts House? ").strip() or "Your House").capitalize()
     print("\n")
-    print(f"Don't let {house.capitalize()} down!\n")
+    print(f"Don't let {house} down!\n")
 
     score = 0
     for question in questions:
         result = question.ask()
         if result:
             score += 1
-            print(f"Correct! 10 points to {house}!")
+            print(f"Correct! 10 points to {house}!\n")
         else:
-            print(f"Incorrect, the correct answer is {question.answer}")
+            print(f"Incorrect, the correct answer is {question.answer}\n")
 
-    print("\n=" * 40)
+    print("\n")
+    print("=" * 40)
     print(f"You earned {house} {score * 10} points!")
     print(f"You got {score} questions right out of {len(questions)}!")
     print("=" * 40)
