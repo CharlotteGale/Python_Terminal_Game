@@ -1,23 +1,59 @@
-# Python Terminal Game
-This a short Harry Potter Quiz that asks the user their House and tracks the score.
-
-## Why this Project?
-I am a Potterhead, I grew up with the books, delved deep into the realms of HP fanfiction, and collect the Lego.
-(I **will** watch the films, but they're not the best thing about the franchise.)
-So, it seemed like a logical step to incorporate a theme I am comfortable with to aid in practicing the concepts 
-taught so far in the Computer Science track by Codecademy.
+# Are You a Potterhead? - A Python CLI Quiz
+A simple command-line quiz game written in Python.     
+Answer multiple-choice questions about the Harry Potter universe, earn points for your Hogwarts House, and see how 
+much of a true Potterhead you really are.
 
 ## Features
-A simple CLI Quiz that:
-- Asks 10 multiple choice questions
-- Tracks score
-- Awards points to the users Hogwarts House
+- 10 multiple choice Harry Potter questions
+- Awards 10 points per correct answer to your chosen Hogwarts House
+- Uses Python classes for clean structure
+- Validates user input
+- Pure CLI experience, no external libraries required.
 
-## Tech Breakdown
-I plan to use classes to model questions, lists to store quiz data, and loops to run through them.
+## Demo
+![img.png](img.png)
 
-## Challenges
+## Getting Started
+**Requirements**
+- Python 3.8 or later
 
-## How to Run it
+**Installation**        
+Clone the repository:   
+*https*:        
+```bash
+git clone https://github.com/CharlotteGale/Python_Terminal_Game.git
+cd Python_Terminal_Game
+```
+*ssh*:      
+```bash
+git clone git@github.com:CharlotteGale/Python_Terminal_Game.git
+cd Python_Terminal_Game
+```
 
-## Reflections
+Run the quiz:
+```bash
+python quiz.py
+```
+
+## How It Works
+Each quiz question is represented as a `Question` object:
+```python
+class Question:
+    def __init__(self, question_text, choices, answer):
+        self.question_text = question_text
+        self.choices = choices
+        self.answer = answer
+```
+
+The program:
+1. Prompts for your Hogwarts House
+2. Loops through the quiz questions
+3. Validates your answers (only accepts numbers in range)
+4. Awards points and displays your final score
+
+## What I Learned
+- Basics of OOP in Python
+- Input validation with `isdigit()`
+- Structuring a small but complete project
+- Using Git for version control
+
