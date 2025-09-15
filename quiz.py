@@ -46,21 +46,24 @@ def main():
     ]
 
     print("Are You a Potterhead?")
-    house = input("What is your Hogwarts House?") or "Your House"
-    print(f"Don't let {house} down!\n")
+    house = input("What is your Hogwarts House? ") or "Your House"
+    print("\n")
+    print(f"Don't let {house.capitalize()} down!\n")
 
     score = 0
     for question in questions:
-        if question.ask():
+        result = question.ask()
+        if result:
             score += 1
             print(f"Correct! 10 points to {house}!")
         else:
             print(f"Incorrect, the correct answer is {question.answer}")
 
-    print("=" * 40)
+    print("\n=" * 40)
     print(f"You earned {house} {score * 10} points!")
     print(f"You got {score} questions right out of {len(questions)}!")
     print("=" * 40)
+    print("\n")
 
 if __name__ == "__main__":
     main()
