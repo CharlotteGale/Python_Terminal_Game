@@ -57,3 +57,6 @@ The program:
 - Structuring a small but complete project
 - Using Git for version control
 
+## Project Links
+[Blog Post](https://dev.to/charlottegale/building-a-harry-potter-quiz-in-python-1m5n)       
+[GitHub Repo](https://github.com/CharlotteGale/Python_Terminal_Game#)
